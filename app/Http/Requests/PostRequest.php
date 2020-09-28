@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class PostRequest extends FormRequest
 {
@@ -24,8 +25,9 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string',
-            'text' => 'required|string'
+            'content' => 'required|string',
+            'title' => 'exclude_if:title,null|max:255',
+            'private' => 'nullable'
         ];
     }
 }

@@ -2,6 +2,10 @@
 
 @section('content')
     <div class="container">
-        <h1> Welcome page </h1>
+        <div class="jumbotron">
+            <h1 class="">Hello!</h1>
+            <hr>
+            <p class="lead">Welcome to the one another CRUD application.</p>
+        </div>
     </div>
 @endsection

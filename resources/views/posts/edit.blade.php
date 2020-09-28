@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
     <div class="container card">
-        <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="post">
+        <form action="{{route('posts.update', compact('post'))}}" enctype="multipart/form-data" method="post">
             @csrf
+            @method('patch')
             <div class="row card-header">
-                <h3>Create new post</h3>
+                <h3>Update the post</h3>
             </div>
 
             <div class="card-body">
@@ -16,7 +17,7 @@
                                id="title"
                                class="form-control @error('content') is-invalid @enderror"
                                name="title"
-                               value="{{old('title')}}"
+                               value="{{$post->title}}"
                                autofocus>
                         @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -28,7 +29,7 @@
 
                 <!-- Content -->
                 <div class="form-group row form-check">
-                    <input class="form-check-input" type="checkbox" name="private" id="private">
+                    <input class="form-check-input" type="checkbox" name="private" id="private" {{$post->private ? 'checked' : ''}}>
                     <label class="form-check-label" for="private">Private</label>
                 </div>
 
@@ -39,7 +40,7 @@
                               class="form-control @error('content') is-invalid @enderror"
                               name="content"
                               autofocus
-                              rows="10">
+                              rows="10">{{$post->content}}
                     </textarea>
                     @error('content')
                     <span class="invalid-feedback" role="alert">
@@ -50,7 +51,7 @@
 
                 <!-- Submit -->
                 <div class="row pt-2">
-                    <button class="btn btn-primary" type="submit" >Create new post</button>
+                    <button class="btn btn-primary" type="submit" >Update the post</button>
                 </div>
             </div>
         </form>

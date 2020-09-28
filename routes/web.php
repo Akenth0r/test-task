@@ -18,7 +18,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function() {
     return view('welcome');
 });
-Route::resource('posts', PostController::class)->where(['post' => '\d']);
+Route::resource('posts', PostController::class)->where(['post' => '\d+']);
+Route::get('user/posts', [PostController::class, 'indexUserPosts'])->name('user.posts.index');
 
 Auth::routes();
 
