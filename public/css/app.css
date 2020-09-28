@@ -10899,3 +10899,29 @@ a.text-dark:focus {
   }
 }
 
+.navigation-main {
+  background: #023859 linear-gradient(#023859, #02456c);
+}
+
+.btn-login {
+  border: solid #fbfcfc 0.1rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.1s linear;
+}
+
+.btn-login:hover {
+  background-color: #fbfcfc99;
+}
+
+.btn-register {
+  border: solid #fbfcfc 0.1rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.1s linear;
+  background-color: #fdfdfe;
+  color: #1b4b72 !important;
+}
+
+.btn-register:hover {
+  background-color: #AAAAAA;
+}
+
