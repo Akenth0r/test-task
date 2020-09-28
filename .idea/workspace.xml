@@ -121,6 +121,7 @@
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i8gNuNmTwPMmf3j65jPyrkbbGJ" />
@@ -153,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601294596523</updated>
-      <workItem from="1601294597546" duration="3306000" />
+      <workItem from="1601294597546" duration="3920000" />
     </task>
     <servers />
   </component>
