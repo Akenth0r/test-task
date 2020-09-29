@@ -22,3 +22,6 @@
     <li> <code> composer install </code> </li>
     <li> <i> optional: </i> you can reseed db with <code> php artisan migrate:fresh --seed </code> </li>
 </ol>
+<h2> Demo </h2>
+<img src="https://github.com/Akenth0r/test-task/blob/master/previews/preview1.png"/>
+<img src="https://github.com/Akenth0r/test-task/blob/master/previews/preview2.png"/>
