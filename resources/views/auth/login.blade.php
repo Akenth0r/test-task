@@ -68,7 +68,7 @@
                             <div class="col-md-8 offset-md-4">
                                 <a class="btn btn-danger" href="{{route('auth.google')}}">
                                     <span class="fa fa-google"></span>
-                                    Login with google
+                                    Login with Google
                                 </a>
                             </div>
                         </div>
