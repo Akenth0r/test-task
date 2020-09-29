@@ -15,6 +15,10 @@
 </ul>
 
 <h2> Installation </h2>
-``` git clone https://github.com/Akenth0r/test-task.git ```
-``` npm install ```
-``` composer install ```
+<ol>
+    <li> <code> git clone https://github.com/Akenth0r/test-task.git </code> </li>
+    <li> <code> cd test-task </code> </li>
+    <li> <code> npm install </code> </li>
+    <li> <code> composer install </code> </li>
+    <li> <i> optional: </i> you can reseed db with <code> php artisan migrate:fresh --seed </code> </li>
+</ol>
