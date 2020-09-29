@@ -24,10 +24,7 @@ Route::get('/', function() {
 Route::resource('posts', PostController::class)->where(['post' => '\d+']);
 Route::get('user/posts', [PostController::class, 'indexUserPosts'])->name('user.posts.index');
 
-// Google OAUTH
-//Route::get('google', function () {
- //   return view('googleAuth');
-//});
+// Google auth
 Route::get('auth/google', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [\App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
