@@ -16,10 +16,10 @@
                         <a href="{{route('posts.show', ['post' => $post->id])}}">{{$post->title}}</a>
                         @if($user->id == $post->user->id)
                             <a href="{{route('posts.edit', compact('post'))}}" class="mx-1"><span class="fas fa-edit text-dark"></span></a>
-                            <a href="" onclick="event.preventDefault(); document.getElementById('delete-form').submit()">
+                            <a href="" onclick="event.preventDefault(); document.getElementById('delete-form-{{$post->id}}').submit()">
                                 <span class="fas fa-trash text-dark"></span>
                             </a>
-                            <form action="{{route('posts.destroy', compact('post'))}}" method="post" id="delete-form" class="d-none">
+                            <form action="{{route('posts.destroy', compact('post'))}}" method="post" id="delete-form-{{$post->id}}" class="d-none">
                                 @csrf
                                 @method('delete')
                             </form>
